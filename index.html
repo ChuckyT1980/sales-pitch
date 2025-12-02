@@ -10,8 +10,8 @@
         /* General Body and Container */
         body { 
             font-family: 'Inter', Arial, sans-serif; 
-            background-color: #121212; /* Deep dark background */
-            color: #f0f0f0; 
+            background-color: #0d0d0d; /* Ultra dark background */
+            color: #e0e0e0; 
             padding: 20px;
             line-height: 1.5;
         }
@@ -22,55 +22,58 @@
         
         /* Header Styling */
         header {
-            border-bottom: 2px solid #2a2a2a;
+            border-bottom: 2px solid #222;
             padding-bottom: 20px;
             margin-bottom: 30px;
             text-align: center;
         }
         h1 {
             font-size: 32px;
-            font-weight: 800;
-            color: #4CAF50; /* Tech Green for visibility */
-            letter-spacing: 0.5px;
+            font-weight: 900; /* Extra bold */
+            color: #00BFA5; /* Teal/Aqua - A strong tech accent */
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(0, 191, 165, 0.5); /* Subtle glow */
         }
         
         /* Section and Input Containers */
         #inputs, #outputs {
-            background-color: #1e1e1e;
-            padding: 20px;
+            background-color: #1a1a1a;
+            padding: 24px;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
             margin-bottom: 30px;
         }
         h2 {
-            font-size: 18px;
-            font-weight: 600;
-            border-bottom: 1px solid #333333;
-            padding-bottom: 6px;
-            margin-bottom: 15px;
-            color: #64b5f6; /* Blue for input titles */
+            font-size: 19px;
+            font-weight: 700;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+            color: #90CAF9; /* Light blue for input titles */
         }
         
         /* Input Fields */
         input[type="number"] {
-            padding: 10px;
+            padding: 12px;
             border-radius: 6px;
-            background-color: #2a2a2a;
-            border: 1px solid #333333;
-            color: #f0f0f0;
+            background-color: #2c2c2c;
+            border: 1px solid #444;
+            color: #ffffff;
             width: 100%;
             transition: border-color 0.3s;
+            font-size: 16px;
         }
         input[type="number"]:focus {
             outline: none;
-            border-color: #4CAF50; /* Green focus ring */
+            border-color: #00BFA5; /* Teal focus ring */
+            box-shadow: 0 0 0 2px rgba(0, 191, 165, 0.3);
         }
         
         /* Grid Layout */
         .grid-cols-2 {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 15px;
+            gap: 20px;
         }
         .grid-cols-2 > div {
             display: flex;
@@ -79,37 +82,82 @@
 
         /* Metric Cards (Outputs) */
         .card { 
-            padding: 15px;
-            border-radius: 8px;
+            padding: 18px;
+            border-radius: 10px;
             background-color: #242424;
-            border-left: 4px solid #4CAF50; /* Green left border for emphasis */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+            border-left: 5px solid #00BFA5; /* Primary accent for all data */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); 
+            transition: transform 0.3s;
         }
+        
+        /* Highlight ROI Card */
+        #roi_card {
+            background-color: #00BFA5; /* Teal background for maximum visibility */
+            color: #0d0d0d;
+            border: none;
+            border-radius: 12px;
+            padding: 20px;
+            grid-column: span 2 / span 2;
+            box-shadow: 0 8px 16px rgba(0, 191, 165, 0.4);
+        }
+        #roi_card .metric-label {
+            color: #0d0d0d;
+            font-weight: 700;
+        }
+        #roi_card .metric-value {
+             color: #0d0d0d;
+             font-size: 36px; /* Larger text for ROI */
+        }
+
         .metric-value {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 6px;
+            font-size: 26px;
+            font-weight: 800;
+            margin-top: 8px;
             letter-spacing: 1px;
         }
         .metric-label {
-            font-size: 10px;
+            font-size: 11px;
             text-transform: uppercase;
             color: #aaaaaa;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         /* Colors for Metrics */
-        .text-green-400 { color: #4ade80; } /* Revenue/Success */
-        .text-yellow-400 { color: #facc15; } /* ROI/Warning */
+        .text-green-400 { color: #4ade80; } /* Revenue */
+        .text-yellow-400 { color: #facc15; } /* Standard ROI color (used for text inside non-ROI cards) */
         .text-red-500 { color: #ef4444; } /* Negative ROI */
         .col-span-2 {
             grid-column: span 2 / span 2;
         }
         
+        /* Trust Bar */
+        .trust-bar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            padding: 10px 0;
+            margin-bottom: 25px;
+            font-size: 12px;
+            color: #aaaaaa;
+            border: 1px solid #2a2a2a;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+        }
+        .trust-icon {
+            font-size: 16px;
+            margin-right: 5px;
+            color: #00BFA5;
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 600px) {
-            h1 { font-size: 26px; }
-            .metric-value { font-size: 20px; }
+            h1 { font-size: 28px; }
+            .metric-value { font-size: 22px; }
+            #roi_card .metric-value { font-size: 32px; }
+            .trust-bar { flex-direction: column; gap: 8px; }
         }
     </style>
 </head>
@@ -123,6 +171,19 @@
             <p style="font-size: 14px; margin-top: 4px; color: #9a9a9a;">Logic Flow Systems: Funds Scale, Not Development.</p>
         </header>
         
+        <!-- NEW TRUST & VALUE BAR -->
+        <div class="trust-bar">
+            <div class="trust-item">
+                <span class="trust-icon">&#10003;</span> **Zero Lock-In** (Open Architecture)
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">&#x1F512;</span> **Secured** (Serverless Deployment)
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">&#x231B;</span> **< 90 Day Pilot** (Guaranteed Value)
+            </div>
+        </div>
+
         <!-- INPUTS SECTION -->
         <div id="inputs">
             <h2>Investor Inputs</h2>
@@ -152,7 +213,7 @@
 
         <!-- OUTPUTS SECTION -->
         <div id="outputs">
-            <h2 style="color: #4CAF50;">Projected Outcomes (5-Year Horizon)</h2>
+            <h2 style="color: #00BFA5;">Projected Outcomes (5-Year Horizon)</h2>
 
             <div class="grid-cols-2">
                 <div class="card">
@@ -160,9 +221,9 @@
                     <p id="net_revenue" class="metric-value text-green-400">$0</p>
                 </div>
 
-                <div class="card">
+                <div id="roi_card" class="card">
                     <p class="metric-label">Return on Investment (ROI)</p>
-                    <p id="roi_output" class="metric-value text-yellow-400">0%</p>
+                    <p id="roi_output" class="metric-value" style="color: #0d0d0d;">0%</p>
                 </div>
 
                 <div class="card col-span-2">
@@ -251,9 +312,18 @@
                         roi_output.textContent = `${roi.toFixed(0)}%`;
                         
                         // Conditional styling for ROI
-                        const roiColor = (roi < 0) ? '#ef4444' : '#facc15';
-                        roi_output.style.color = roiColor;
+                        const roiTextColor = (roi < 0) ? '#0d0d0d' : '#0d0d0d'; // Text inside the card is always black/dark
+                        roi_output.style.color = roiTextColor;
                         
+                        // Set background color for the ROI card based on status
+                        const roiCard = document.getElementById('roi_card');
+                        if (roi < 0) {
+                            roiCard.style.backgroundColor = '#4d1e1e'; // Dark red background for loss
+                            roiCard.style.borderLeftColor = '#ef4444'; 
+                        } else {
+                            roiCard.style.backgroundColor = '#00BFA5'; // Primary teal for profit
+                            roiCard.style.borderLeftColor = '#00BFA5';
+                        }
 
 
                         // Efficiency Multiple (Hidden element but required for JS to run correctly)
