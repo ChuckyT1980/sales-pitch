@@ -3,166 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logic Flow Systems: 400% ROI & Efficiency Engine</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font -->
+    <title>LFS: Live ROI Engine</title>
+    
+    <!-- MINIMAL, INTERNAL CSS UPGRADE FOR PROFESSIONAL LOOK -->
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        /* Custom background for technical look */
-        .dashboard-bg {
-            background: linear-gradient(145deg, #0e111a, #1a1e26);
+        /* General Body and Container */
+        body { 
+            font-family: 'Inter', Arial, sans-serif; 
+            background-color: #121212; /* Deep dark background */
+            color: #f0f0f0; 
+            padding: 20px;
+            line-height: 1.5;
         }
-        /* Custom highlight for key metrics */
-        .metric-card {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-            border-left: 4px solid #3b82f6; /* Blue border for data focus */
+        .container {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styling */
+        header {
+            border-bottom: 2px solid #2a2a2a;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #4CAF50; /* Tech Green for visibility */
+            letter-spacing: 0.5px;
+        }
+        
+        /* Section and Input Containers */
+        #inputs, #outputs {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            color: #64b5f6; /* Blue for input titles */
+        }
+        
+        /* Input Fields */
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 6px;
+            background-color: #2a2a2a;
+            border: 1px solid #333333;
+            color: #f0f0f0;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #4CAF50; /* Green focus ring */
+        }
+        
+        /* Grid Layout */
+        .grid-cols-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+        }
+        .grid-cols-2 > div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Metric Cards (Outputs) */
+        .card { 
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #242424;
+            border-left: 4px solid #4CAF50; /* Green left border for emphasis */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 6px;
+            letter-spacing: 1px;
+        }
+        .metric-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #aaaaaa;
+            font-weight: 500;
+        }
+        
+        /* Colors for Metrics */
+        .text-green-400 { color: #4ade80; } /* Revenue/Success */
+        .text-yellow-400 { color: #facc15; } /* ROI/Warning */
+        .text-red-500 { color: #ef4444; } /* Negative ROI */
+        .col-span-2 {
+            grid-column: span 2 / span 2;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            .metric-value { font-size: 20px; }
         }
     </style>
 </head>
-<body class="dashboard-bg text-gray-100 min-h-screen p-4 sm:p-8">
+<body class="p-4 sm:p-8">
 
-    <div class="max-w-4xl mx-auto">
+    <div class="container mx-auto">
         
-        <!-- SECTION 1: TITLE & HOOK (400% ROI: ELIMINATING GLOBAL PROCESS FRICTION) -->
-        <header class="text-center mb-10 p-4 border-b border-gray-700">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-400 tracking-tight">
-                400% ROI: ELIMINATING GLOBAL PROCESS FRICTION
-            </h1>
-            <p class="text-lg mt-2 text-gray-400">
-                Bootstrapped Proof of Concept. Open Architecture for Maximum Client Flexibility.
-            </p>
-            <div class="mt-4 text-sm font-medium text-amber-300">
-                **Logic Flow Systems** - *The investment you make here funds scaling, not development.*
-            </div>
+        <!-- PITCH HEADER - MINIMAL -->
+        <header>
+            <h1>LIVE ROI VALIDATION ENGINE</h1>
+            <p style="font-size: 14px; margin-top: 4px; color: #9a9a9a;">Logic Flow Systems: Funds Scale, Not Development.</p>
         </header>
         
-        <!-- SECTION 2: THE PROBLEM (QUANTIFY THE PAIN) -->
-        <div class="mb-10 p-4">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-200">THE UNMET MARKET PAIN: HIGH-COST FRICTION ACROSS ALL INDUSTRIES</h2>
-            <p class="text-gray-400 mb-6">We identified a core process friction costing the U.S. economy an estimated **$1.2 Billion** annually in non-value-add administrative time and preventable human error in key sectors (e.g., Supply Chain, Content Creation, and Finance).</p>
-            
-            <ul class="space-y-3 text-gray-400 border-l-4 border-red-500 pl-4 py-2 bg-[#1e2430] p-4 rounded-lg">
-                <li class="text-red-300 font-medium">The current reliance on single-sector solutions fails to address the underlying issue: outdated, siloed operational logic and **forced vendor lock-in.**</li>
-                <li>**Sector 1 (e.g., Trucking/Supply Chain):** Manual Data Reconciliation leads to delays and fines.</li>
-                <li>**Sector 2 (e.g., Creator Market/Finance):** Zero real-time predictive modeling for contract and payment risk.</li>
-            </ul>
-        </div>
+        <!-- INPUTS SECTION -->
+        <div id="inputs">
+            <h2>Investor Inputs</h2>
+            <div class="grid-cols-2">
 
-        <!-- SECTION 3: THE ENGINE (LIVE DEMO & LOGIC) -->
-        <div class="mb-10 p-4">
-            <h2 class="text-2xl font-semibold mb-6 text-blue-300">THE ENGINE: LOGIC FLOW SYSTEM (LFS) - THE DATA-AGNOSTIC ASSET</h2>
-            
-            <p class="text-gray-400 mb-6">The Logic Flow System is an **Open-Architecture, Data-Agnostic** automation structure designed to route, validate, and execute complex business logic instantly, removing the human error cycle entirely. **The result is an immediate, verifiable increase in operational leverage that can be deployed horizontally across any data-rich industry.**</p>
-            
-            <!-- Asset 1: The Core Logic Placeholder (You would describe your diagram here) -->
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 mb-8">
-                <p class="text-center text-xl font-bold text-green-400">Core Logic Flow Diagram Placeholder</p>
-                <p class="text-sm text-gray-500 text-center mt-2">
-                    *Insert the PNG image of your clean flow diagram created in Google Drawings here for the pitch.*
-                </p>
-                <div class="h-32 w-full bg-gray-900 flex items-center justify-center mt-3 rounded-lg">
-                    <span class="text-gray-500 text-sm">Automated Validation and Routing (AVR) Engine Diagram</span>
-                </div>
-                <p class="text-xs text-gray-500 text-center mt-2">
-                    *Caption: This diagram demonstrates the automated, branching logic—the core system—that replaces 5,000 annual man-hours of manual reconciliation, irrespective of the industry.*
-                </p>
-            </div>
-            
-            <h3 class="text-xl font-semibold mb-4 border-b pb-2 border-gray-700 text-blue-300">Asset 2: Live ROI Demonstration (The Sale)</h3>
-            <p class="text-amber-400 text-sm mb-4">**IN MEETING STRATEGY:** Invite the investor to input their risk/investment variables below to see the live ROI projection.</p>
-            
-            <!-- START OF EMBEDDED DASHBOARD CODE -->
-            <div id="live-dashboard">
-                <div id="inputs" class="bg-[#1e2430] p-6 rounded-xl mb-8 shadow-2xl">
-                    <h2 class="text-xl font-semibold mb-4 border-b pb-2 border-gray-700 text-blue-300">Investor Inputs (Customize for the Meeting)</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                        <div class="flex flex-col">
-                            <label for="investment" class="text-sm font-medium text-gray-400 mb-1">Total Capital Investment Asked ($)</label>
-                            <input type="number" id="investment" value="100000" min="10000" step="10000" class="p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white transition duration-200">
-                        </div>
-
-                        <div class="flex flex-col">
-                            <label for="market_inefficiency" class="text-sm font-medium text-gray-400 mb-1">Annual Market Inefficiency Cost ($)</label>
-                            <input type="number" id="market_inefficiency" value="5000000" min="100000" step="100000" class="p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white transition duration-200">
-                        </div>
-
-                        <div class="flex flex-col">
-                            <label for="market_capture" class="text-sm font-medium text-gray-400 mb-1">Target Market Capture % (Goal)</label>
-                            <input type="number" id="market_capture" value="5" min="1" max="100" step="1" class="p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white transition duration-200">
-                        </div>
-
-                        <div class="flex flex-col">
-                            <label for="efficiency_gain" class="text-sm font-medium text-gray-400 mb-1">Logic Flow Efficiency Gain (x Current Cost)</label>
-                            <input type="number" id="efficiency_gain" value="5" min="1" max="20" step="0.5" class="p-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white transition duration-200">
-                        </div>
-
-                    </div>
+                <div>
+                    <label for="investment" class="metric-label">1. Capital Investment Asked ($)</label>
+                    <input type="number" id="investment" value="100000" min="10000" step="10000">
                 </div>
 
-                <div id="outputs">
-                    <h2 class="text-xl font-semibold mb-4 border-b pb-2 border-gray-700 text-blue-300">Projected Outcomes (5-Year Horizon)</h2>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                        <div class="metric-card bg-[#1e2430] p-5 rounded-xl">
-                            <p class="text-sm font-medium text-gray-400 uppercase">Total Projected Revenue</p>
-                            <p id="net_revenue" class="text-3xl font-bold mt-1 text-green-400">$0</p>
-                        </div>
-
-                        <div class="metric-card bg-[#1e2430] p-5 rounded-xl">
-                            <p class="text-sm font-medium text-gray-400 uppercase">Return on Investment (ROI)</p>
-                            <p id="roi_output" class="text-3xl font-bold mt-1 text-yellow-400">0%</p>
-                        </div>
-
-                        <div class="metric-card bg-[#1e2430] p-5 rounded-xl">
-                            <p class="text-sm font-medium text-gray-400 uppercase">Efficiency Multiple</p>
-                            <p id="efficiency_multiple" class="text-3xl font-bold mt-1 text-blue-400">0x</p>
-                        </div>
-                    </div>
+                <div>
+                    <label for="market_inefficiency" class="metric-label">2. Annual Market Inefficiency Cost ($)</label>
+                    <input type="number" id="market_inefficiency" value="5000000" min="100000" step="100000">
                 </div>
-            </div>
-            <!-- END OF EMBEDDED DASHBOARD CODE -->
-        </div>
 
-        <!-- SECTION 4: THE FINANCIAL CASE -->
-        <div class="mt-10 p-4">
-            <h3 class="text-2xl font-semibold mb-4 text-gray-200">CAPITAL ALLOCATION: WE ARE INVESTING IN YOUR EXPONENTIAL RETURN</h3>
-            
-            <p class="text-gray-400 mb-6">We built this system with minimal resources, proving its technical viability and our commitment to capital efficiency. Our lean operation ensures we have a significantly lower burn rate than any competitor.</p>
+                <div>
+                    <label for="market_capture" class="metric-label">3. Target Market Capture %</label>
+                    <input type="number" id="market_capture" value="5" min="1" max="100" step="1">
+                </div>
 
-            <div class="bg-[#1a1e26] p-6 border border-gray-700 rounded-xl">
-                <p class="text-lg text-white font-bold mb-3">The Ask: We are requesting <span class="text-red-500 font-extrabold">$100,000</span> in seed capital.</p>
-
-                <ul class="text-gray-400 space-y-2">
-                    <li class="font-bold">36-Month Target ROI: <span class="text-yellow-400">400%</span> (4x return on capital based on multi-sector model entry).</li>
-                    <li><span class="text-green-300 font-semibold">70% of Capital:</span> Dedicated to scaling the LFS architecture (API integration, dedicated server capacity, developing two additional industry-specific integration modules, and open-source license hardening).</li>
-                    <li><span class="text-green-300 font-semibold">30% of Capital:</span> Dedicated to securing two specialized technical hires needed for market deployment and client integration.</li>
-                </ul>
-                <p class="text-amber-300 mt-4 text-sm">The investment is for SCALE and MARKET EXPANSION, not maintenance. The efficiency you just saw calculated live is the foundation for an enterprise asset.</p>
+                <div>
+                    <label for="efficiency_gain" class="metric-label">4. LFS Efficiency Multiplier (x)</label>
+                    <input type="number" id="efficiency_gain" value="5" min="1" max="20" step="0.5">
+                </div>
             </div>
         </div>
 
-        <!-- SECTION 5: CONTACT & NEXT STEPS -->
-        <footer class="mt-10 pt-6 border-t border-gray-700 text-center">
-            <h3 class="text-xl font-semibold text-blue-400">NEXT STEPS</h3>
-            <p class="text-gray-400 mt-2">Schedule a Deep Dive: Q&A on Technical Architecture and Final Term Sheet Discussion.</p>
-            
-            <div class="mt-4 text-gray-300">
-                <p class="font-semibold">Your Name: [Your Full Name]</p>
-                <p class="text-sm">System Contact: [Your Professional Email Address]</p>
-            </div>
-            <p class="text-xs text-gray-500 mt-3">*Logic Flow Systems - Bootstrapped IP - Open-Architecture, Zero-Lock-In.*</p>
-        </footer>
+        <!-- OUTPUTS SECTION -->
+        <div id="outputs">
+            <h2 style="color: #4CAF50;">Projected Outcomes (5-Year Horizon)</h2>
 
+            <div class="grid-cols-2">
+                <div class="card">
+                    <p class="metric-label">Total Projected Revenue</p>
+                    <p id="net_revenue" class="metric-value text-green-400">$0</p>
+                </div>
+
+                <div class="card">
+                    <p class="metric-label">Return on Investment (ROI)</p>
+                    <p id="roi_output" class="metric-value text-yellow-400">0%</p>
+                </div>
+
+                <div class="card col-span-2">
+                    <p class="metric-label">Strategic Summary</p>
+                    <p style="font-size: 14px; margin-top: 4px; color: #cccccc;">
+                        Initial funding targets **<span id="capture_value" style="color: #4ade80; font-weight: bold;">$0</span>** of this market's annual inefficiency.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Hidden element used by JavaScript for dynamic text update -->
-    <span id="capture_value" style="display:none;"></span>
+    <!-- Hidden element for JS calculation structure -->
+    <span id="efficiency_multiple" style="display:none;"></span>
+
 
     <script>
-        (function() { // Wrapped entire script in an IIFE to contain the return statement
+        (function() { 
             // Define all required element IDs for input and output
             const REQUIRED_IDS = [
                 'investment', 'market_inefficiency', 'market_capture', 'efficiency_gain',
@@ -183,8 +201,8 @@
             });
 
             if (!allElementsFound) {
-                console.error("LFS Dashboard Error: Initialization failed. One or more required HTML elements could not be found. Check your element IDs. Execution halted.");
-                return; // Now a legal return statement inside the IIFE function
+                console.error("LFS Dashboard Error: Initialization failed. Check your element IDs. Execution halted.");
+                return; 
             }
 
             // Destructure for cleaner access inside the function
@@ -233,15 +251,13 @@
                         roi_output.textContent = `${roi.toFixed(0)}%`;
                         
                         // Conditional styling for ROI
-                        roi_output.classList.remove('text-red-500', 'text-yellow-400');
-                        if (roi < 0) {
-                            roi_output.classList.add('text-red-500');
-                        } else {
-                            roi_output.classList.add('text-yellow-400');
-                        }
+                        const roiColor = (roi < 0) ? '#ef4444' : '#facc15';
+                        roi_output.style.color = roiColor;
+                        
 
-                        // Efficiency Multiple
-                        efficiency_multiple.textContent = `${E_gain.toFixed(1)}x`;
+
+                        // Efficiency Multiple (Hidden element but required for JS to run correctly)
+                        efficiency_multiple.textContent = `${E_gain.toFixed(1)}x`; 
 
                         // Update Strategic Narrative Footer
                         capture_value.textContent = formatter.format(M_annual * C_percent);
@@ -252,7 +268,6 @@
                     // Fail gracefully
                     net_revenue.textContent = "N/A";
                     roi_output.textContent = "N/A";
-                    efficiency_multiple.textContent = "N/A";
                 }
             }
 
